@@ -1,0 +1,44 @@
+<!-- index.html (music_live project) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Music Live Home Page</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>	
+</head>
+
+<body>
+	<nav class='navbar navbar-default'>
+		<div class='container-fluid'>
+			<div class='navbar-header'>
+				{% load static %}
+				<img src="{% static 'images/music_logo.png' %}">
+				<a class='navbar-brand' href='#'>Now Playing: {{tv.name}}</a>
+			</div>
+			<ul class='nav navbar-nav'>
+				<li class='active'><a href='/'>Home</a></li>
+				<li><a href='{% url "tv-url" 0 %}'>Good live</a></li>
+				<li><a href='{% url "tv-url" 1 %}'>Rainy Jazz</a></li>
+				<li><a href='{% url "tv-url" 2 %}'>Lofi Hip Hop</a></li>
+				<li><a href='{% url "tv-url" 3 %}'>Calm Piano</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class='container'>
+		<div id='tvcode' align='center'>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/{{tv.tvcode}}?autoplay=1" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<div class='panel panel-default'>
+	<div class='panel-footer'><em>{{ now }}</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.4.0.js"
+  integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+  crossorigin="anonymous"></script>
+</body>
+</html> 

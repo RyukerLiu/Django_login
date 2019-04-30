@@ -1,0 +1,22 @@
+<!-- header.html -->
+	<nav class='navbar navbar-feault'>
+		<div class='continer-fluid'>
+			<div class='navbar-header'>
+				<div class='navbar-brand' align=center>
+					分享日記
+				</div>
+			</div>
+			<ul class='nav navbar-nav'>
+				<li class='activate'><a href='/'>Home</a></li>
+				{% if username %}
+					<li><a href='/userinfo'>個人資料</a></li>				
+					<li><a href='/post2db'>寫日記</a></li>
+					<li><a href='/contact'>聯絡管理員</a></li>
+					<li><a href='/logout'>登出</a></li>
+				{% else %}
+					<li><a href='/login'>登入</a></li>
+				{% endif %}
+				<li><a href='/admin'>後臺管理</a></li>
+			</ul>
+		</div>
+	</nav>
