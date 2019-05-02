@@ -123,12 +123,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-EMAIL_BACKEND = 'django_mailgun.MailgunBackend'
-MAILGUN_ACCESS_KEY = '9dd6cfc68f9cc1bbdffaa14bbca17981-7bce17e5-528024b8'
-MAILGUN_SERVER_NAME = 'sandboxf7197f4221124565b983be532c29e8d0.mailgun.org'
-EMAIL_USE_TLS=True
-EMAIL_HOST= 'stmp.gmail.com'
-EMAIL_HOST_USER= 'alex03100310@gmail.com'
-EMAIL_HOST_PASSWORD= 's28825252'
-EMAIL_POST= 587

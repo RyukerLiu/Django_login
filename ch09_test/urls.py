@@ -24,7 +24,7 @@ urlpatterns = [
     path('post2db/', views.post2db),
     path('contact/', views.contact),
     path('login/', views.login),
-    path('userinfo/',views.userinfo),
+    path('userinfo/', views.userinfo),
     path('logout/', views.logout),
     re_path(r'^captcha/', include('captcha.urls')),
 ]
